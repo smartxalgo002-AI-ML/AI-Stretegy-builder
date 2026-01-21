@@ -1,6 +1,6 @@
-# AI-Stretegy-builder
-Here is the work flow
+## Strategy Research & Deployment Pipeline
 
+```mermaid
 graph TD
     A[PDF Knowledge Base] -->|RAG Retrieval| B(Researcher Agent: DeepSeek-R1 32B)
     B -->|Generates Hypothesis| C[Coder Agent: DeepSeek-R1 32B]
@@ -18,11 +18,11 @@ graph TD
     H -->|Modified Logic| C
     I -->|Negative Feedback| B
 
-    %% --- NEW BULLETPROOFING WORKFLOW --- %%
+    %% --- BULLETPROOFING WORKFLOW --- %%
     
     G --> J{Stress Test Engine: 100 Trades}
     J -->|50/100 Pass| K[Success Tier: Monitor]
-    J -->|20/100 Neutral| L(Search Agent: Root Cause Analysis)
+    J -->|20/100 Neutral| L[Search Agent: Root Cause Analysis]
     J -->|30/100 Fail| L
     
     L --> M{Reason Identified?}
