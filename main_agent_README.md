@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Backend Signal] -->|Buy/Sell Trigger| B(**Agent 1** - Signal Handler Agent)
     
@@ -22,3 +23,4 @@ graph TD
     style A fill:#f98f,stroke:#333,stroke-width:5px
     style I fill:#bbf,stroke:#333,stroke-width:2px
     style K fill:#bfb,stroke:#333,stroke-width:2px
+```
