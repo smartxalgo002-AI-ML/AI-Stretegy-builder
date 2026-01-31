@@ -3,14 +3,16 @@ graph TD
     A[Backend Signal] -->|Buy/Sell Trigger| B(**Agent 1** - Signal Handler Agent)
     
     %% Updated Data Flow from Agent 1
-    B -->|OHLCV, Tick, Options, Market Depth| G[(OHLCV Models)]
+    B -->|OHLCV, Tick, Options, Market Depth| G{Historical Models}
     
     %% Specific Context Transfer
     B -->|Timestamp, Symbol, Strategy, Price| C(**Agent 2** - Data Retrieval Agent)
     
-    %% Agent 2 Sources
+    %% Agent 2 Expanded Sources
     DB1[(Strategy DB)] --> C
     DB2[(News Vector DB)] --> C
+    DB3[(Financial DB)] --> C
+    DB4[(Corporate Action DB)] --> C
     G -->|Market Trend| C
 
     %% Agent 3 Central Intelligence
