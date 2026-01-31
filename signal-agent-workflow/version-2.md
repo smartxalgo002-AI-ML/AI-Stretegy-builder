@@ -17,7 +17,7 @@ graph TD
 
     %% Agent 2 Central Intelligence
     C -->|Retrieved Context| D(**Agent 2** - Intelligence Retriever)
-    E[(Market Sentiment)] --> D
+    E[(Market Sentiment Analysis DB)] --> D
     F[(Book Database)] --> D
 
     %% Agent 3 & Internet
