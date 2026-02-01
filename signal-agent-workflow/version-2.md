@@ -27,8 +27,8 @@ graph TD
     F[(Book Database)] --> E
     E -->|Refined Intel| H(**Agent 5** - Analysis Agent)
 
-    %% Agent 4 Internet Search
-    N[(Internet)] --> L
+    %% Agent 4 Internet Search with Icon
+    N(fa:fa-globe 🌎 Internet) --> L
     L -->|Real-time Research| H
 
     %% Final Decision Path
@@ -47,4 +47,5 @@ graph TD
     style FB fill:#fff2cc,stroke:#d6b656,stroke-width:2px
     style G fill:#def,stroke:#333,stroke-width:2px
     style D fill:#ffd,stroke:#333,stroke-width:2px
+    style N fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 ```
