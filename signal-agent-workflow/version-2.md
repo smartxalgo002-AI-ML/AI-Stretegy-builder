@@ -20,23 +20,22 @@ graph TD
     
     %% Query Distribution
     D -->|Search Query List| E(**Agent 3** - Intelligence Retriever)
-    D -->|Search Query List| L(**Agent 4** - Search Agent)
+
 
     %% Agent 3 Intelligence Gathering
     M[(Market Sentiment)] --> E
     F[(Book Database)] --> E
-    E -->|Refined Intel| H(**Agent 5** - Analysis Agent)
+    E -->|Refined Intel| H(**Agent 4** - Analysis Agent)
 
     %% Agent 4 Internet Search with Icon
-    N(fa:fa-globe 🌎 Internet) --> L
-    L -->|Real-time Research| H
+    N(fa:fa-globe 🌎 Internet) --> E
 
     %% Final Decision Path
-    H -->|Analysis Report| I(**Agent 6** - Decision-Making Agent)
+    H -->|Analysis Report| I(**Agent 5** - Decision-Making Agent)
     I -->|Final Recommendation| J{Execute Trade?}
 
     %% Feedback Loop
-    J -->|Yes/No| K(**Agent 7** - Feedback Agent)
+    J -->|Yes/No| K(**Agent 6** - Feedback Agent)
     K -->|Learn & Refine| FB[(Feedback Database)]
     FB -.-> E
 
